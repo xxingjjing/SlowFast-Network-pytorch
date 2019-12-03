@@ -62,7 +62,15 @@ ava/ava
 python 3  
 PyTorch >= 1.0  
 tensorboardX  
-OpenCV  
+OpenCV
+
+## Install
+conda install pytorch==1.2.0 torchvision==0.4.0 cudatoolkit=10.0 -c pytorch
+conda install -c menpo opencv
+conda install matplotlib
+conda install -c anaconda pandas
+conda install -c anaconda scipy
+conda install -c anaconda scikit-learn
 ## Code Reference:
 [1] https://github.com/Guocode/SlowFast-Networks/  
 [2] https://github.com/potterhsu/easy-faster-rcnn.pytorch 

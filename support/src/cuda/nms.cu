@@ -1,4 +1,5 @@
 // Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved.
+
 #include <ATen/ATen.h>
 #include <ATen/cuda/CUDAContext.h>
 
@@ -7,6 +8,7 @@
 
 #include <vector>
 #include <iostream>
+
 
 int const threadsPerBlock = sizeof(unsigned long long) * 8;
 

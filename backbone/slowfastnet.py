@@ -211,9 +211,9 @@ class SlowFast(nn.Module):
                 nn.Conv3d(
                     self.slow_inplanes,
                     planes * block.expansion,
-                    kernel_size=1,)
+                    kernel_size=1,
                     stride=(1,stride,stride),
-                    bias=False), nn.BatchNorm3d(planes * block.expansion)
+                    bias=False), nn.BatchNorm3d(planes * block.expansion))
 
         layers = []
         layers.append(block(self.slow_inplanes, planes, stride, downsample, head_conv=head_conv))
