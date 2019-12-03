@@ -1,28 +1,7 @@
-# SlowFast-Network-pytorch
-An easy PyTorch implement of SlowFast-Network ["SlowFast Networks for Video Recognition"](https://arxiv.org/abs/1812.03982).
-
-We also complete a real-time action detection demo. The demo is orgnized as：
-
-```bash
-         Yolo v3  
-            │    
-            │
-         deepsort  
-            │      
-            │ 
-     SlowFast Network
- ```
-## Display the demo results
-![](data/ava.gif)          |
-:-------------------------:|
-![](data/saveVideo.gif)    |
-![](data/saveVideo2.gif)   |
-
-
 ## Run the demo on your own data
 1.Clone the repository
 ```bash
-git clone https://github.com/MagicChuyi/SlowFast-Network-pytorch.git
+git clone https://github.com/xxingjjing/SlowFast-Network-pytorch.git
 ```
 2.Download Yolo v3 model: 
 https://pan.baidu.com/s/1tT2uzI44KD3zzAgMskU1Aw
@@ -35,36 +14,22 @@ https://pan.baidu.com/s/17GLB2k3VhPgRsVCadVmjaA
 
 5.Modify the model path and your video path in video_demo.py.
 
-6.Run video_demo.py.
-## Train your own model
-1.Download AVA dataset.
-
-2.Discard corrupted data.
-
-3.Dataset should be orgnized as：  
-```
-ava/ava
-│    │ preproc_train  
-│    │    │ clips
-│    │    │ keyframes
-│    │    │ ava_train_v2.2.csv
-│    │ preproc_val  
-     │    │ clips 
-     │    │ keyframes 
-     │    │ ...   
-```
-4.Modify the params in config.py and train_config.py. 
-
-5.Run train_video.py.
+6.Run cam_demo.py.
 
 
 ## Requirements
 python 3  
 PyTorch >= 1.0  
-tensorboardX  
+tensorboardX 
 OpenCV
 
 ## Install
+
+
+### 先到support目录安装一个扩展
+cd support && python setup.py install
+
+### 以下包提示缺什么就装什么
 conda install pytorch==1.2.0 torchvision==0.4.0 cudatoolkit=10.0 -c pytorch
 conda install -c menpo opencv
 conda install matplotlib
